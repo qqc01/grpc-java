@@ -89,23 +89,23 @@ project(':grpc-gcp-observability').projectDir = "$rootDir/gcp-observability" as 
 project(':grpc-gcp-observability:interop').projectDir = "$rootDir/gcp-observability/interop" as File
 project(':grpc-istio-interop-testing').projectDir = "$rootDir/istio-interop-testing" as File
 
-if (settings.hasProperty('skipCodegen') && skipCodegen.toBoolean()) {
-    println '*** Skipping the build of codegen and compilation of proto files because skipCodegen=true'
-} else {
-    include ":grpc-compiler"
-    project(':grpc-compiler').projectDir = "$rootDir/compiler" as File
-}
-
-if (settings.hasProperty('skipAndroid') && skipAndroid.toBoolean()) {
-    println '  * Skipping the build of Android projects because skipAndroid=true'
-} else {
-    println '*** Android SDK is required. To avoid building Android projects, set -PskipAndroid=true'
-    include ":grpc-cronet"
-    project(':grpc-cronet').projectDir = "$rootDir/cronet" as File
-    include ":grpc-android"
-    project(':grpc-android').projectDir = "$rootDir/android" as File
-    include ":grpc-android-interop-testing"
-    project(':grpc-android-interop-testing').projectDir = "$rootDir/android-interop-testing" as File
-    include ":grpc-binder"
-    project(':grpc-binder').projectDir = "$rootDir/binder" as File
-}
+//if (settings.hasProperty('skipCodegen') && skipCodegen.toBoolean()) {
+//    println '*** Skipping the build of codegen and compilation of proto files because skipCodegen=true'
+//} else {
+//    include ":grpc-compiler"
+//    project(':grpc-compiler').projectDir = "$rootDir/compiler" as File
+//}
+//
+//if (settings.hasProperty('skipAndroid') && skipAndroid.toBoolean()) {
+//    println '  * Skipping the build of Android projects because skipAndroid=true'
+//} else {
+//    println '*** Android SDK is required. To avoid building Android projects, set -PskipAndroid=true'
+//    include ":grpc-cronet"
+//    project(':grpc-cronet').projectDir = "$rootDir/cronet" as File
+//    include ":grpc-android"
+//    project(':grpc-android').projectDir = "$rootDir/android" as File
+//    include ":grpc-android-interop-testing"
+//    project(':grpc-android-interop-testing').projectDir = "$rootDir/android-interop-testing" as File
+//    include ":grpc-binder"
+//    project(':grpc-binder').projectDir = "$rootDir/binder" as File
+//}
